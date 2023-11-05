@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NuestrosProyectos from '../components/NuestrosProyectos.astro';
+import Comentarios from '../components/Comentarios.astro';
+---
+<script>
+
+	
+	const servicios_img = document.querySelectorAll('.servicios_img');
+
+	const observador = new IntersectionObserver(entry=>{
+		entry.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('show')
+			}else{
+				entry.target.classList.remove('show')
+			}
+		});
+	},{
+		threshold: 0.3
+	})
+
+	servicios_img.forEach(e=>{
+		observador.observe(e)
+	})
+
+
+	
+</script>
+
+
+
+<Layout title=" - Home">
+	
+	<main>
+		<div class=" w-full flex justify-center -z-20 p-10" >
+			<img src="/img/logo.webp" class="w-[40rem] " alt="nangotara s.l logotipo">
+		</div>
+		<section class="banner flex items-center h-[25rem] w-full lg:h-[45rem] ">
+			<div class=" bg-sky-900 w-[80%] rounded-e-xl  font-light mt-16 p-4 border-t-2 text-gray-200 text-lg lg:w-[50%]">
+				<h2 class=" font-semibold text-[#ff9c0d] text-2xl text-center lg:text-4xl border-b">Sobre Nosotros</h2>
+				<p class="lg:text-2xl"> Somos una empresa con un amplio catalogo de servicios y mucha experiencia en el sector de reformas integrales, Somos Especialistas en pladur.</p>
+			</div>
+		</section>
+
+			<h2 class="flex items-center justify-center text-2xl font-bold lg:text-4xl text-center mt-6 mb-10 border-t border-b w-[90%] mx-auto  p-5 text-[#ff9c0d] lg:h-40">Nuestos Servicios</h2>
+
+		<section class="  mx-auto text-center mt-5  flex flex-col items-center gap-10 lg:flex-row">
+			<div class=" w-[90%] rounded-md border-2 ">
+				<img class=" rounded-t-md w-full" src="/img/pladur.webp" alt="servicio img" >
+				<p class=" w-full bg-sky-900 text-white rounded-b-md p-4"> <span class="text-2xl text-[#ff9c0d]">Pladur</span> <br> Especialistas en todo tipo de estructuras de pladur. tabiques, techos, muebles y mas.  </p>
+			</div>
+			<div class=" servicios_img w-[90%] rounded-md border-2 ">
+				<img class=" rounded-t-md w-full" src="/img/obra.webp" alt="servicio img" >
+				<p class=" w-full bg-sky-900 text-white rounded-b-md p-4"> <span class="text-2xl text-[#ff9c0d]">Reformas</span> <br> Revestimientos, Ceramica, Rebozados, Tabiques, baños, cocinas,  Fachadas etc. </p>
+			</div>
+			<div class=" servicios_img w-[90%] rounded-md border-2 ">
+				<img class=" rounded-t-md w-full" src="/img/electricidad.webp" alt="servicio img" >
+				<p class=" w-full bg-sky-900 text-white rounded-b-md p-4"> <span class="text-2xl text-[#ff9c0d]">Electricidad</span> <br>Todo tipo instalaciones electricas. iluminaciones led, lamparas, timbres, internet y mas   </p>
+			</div>
+			
+			<div class=" servicios_img w-[90%] rounded-md border-2 ">
+				<img class=" rounded-t-md w-full" src="/img/fontaneria.webp" alt="servicio img" >
+				<p class=" w-full bg-sky-900 text-white rounded-b-md p-4"> <span class="text-2xl text-[#ff9c0d]">Fontaneria</span> <br>Instalacion y reparacion de fontaneria  trabajamos con  materiales de calidad. </p>
+			</div>
+		</section>
+		
+		<h2 class="flex items-center justify-center w-[90%] mx-auto border-t text-2xl font-bold lg:text-4xl text-center mt-10 mb-10 border-b p-5 text-[#ff9c0d] lg:h-40">Contacto</h2>
+
+		<section class="contacto_img mt-11 flex items-center h-[22rem] lg:h-[45rem]">
+			<div class=" bg-sky-900 w-[85%] rounded-e-xl  font-light mt-16 p-4 border-t-2 text-gray-200 text-lg lg:w-[50%]">
+				<h2 class=" font-semibold text-[#ff9c0d] text-2xl text-center lg:text-4xl">Contactanos</h2>
+				<p class=" lg:text-3xl">Llamanos para brindarte mas informacion sobre presupuestos y servicios. <span class=" font-semibold text-[#ff9c0d] text-lg lg:text-3xl">whatsapp 656 54 25 19</span> <br> <span class=" font-semibold text-[#ff9c0d] text-lg lg:text-3xl">josearanavalenzuela54@gmail.com</span></p>
+			</div>
+		</section>
+
+		<NuestrosProyectos />
+		<Comentarios />
+
+		<section class="
+		servicios_img  w-full flex items-center justify-center p-10"> 
+			<iframe class=" rounded-xl w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.926296728037!2d2.096895276599695!3d41.375685996720144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4990441a95903%3A0x7dabf2a5571c65cf!2sC%2F%20de%20las%20Magnolias%2C%2021%2C%2008950%20Esplugues%20de%20Llobregat%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1698667926889!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</section>
+		
+	</main>
+	<proyectos />
+
+	
+</Layout>
+
+
+<style>
+	.servicios_img{
+		opacity: 0;
+		transition: all .3s ease;
+	}
+	
+	.show{
+		opacity: 1;
+
+	}
+
+	.banner{
+		background-image: url(/img/nosotros.webp);
+		background-size: cover;
+		
+	}
+	.contacto_img{
+		background-image: url(/img/contacto.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		object-fit: cover;
+		
+		
+	}
+</style>
