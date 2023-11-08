@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import NuestrosProyectos from '../components/NuestrosProyectos.astro';
-import Comentarios from '../components/Comentarios.astro';
+
 ---
 <script>
 
@@ -32,9 +32,9 @@ import Comentarios from '../components/Comentarios.astro';
 
 <Layout title=" - Home">
 	
-	<main>
-		<div class=" w-full flex justify-center -z-20 p-10" >
-			<img src="/img/logo.webp" class="w-[40rem] " alt="nangotara s.l logotipo">
+	<main class="relative">
+		<div class=" w-full flex justify-center -z-20 p-10 " >
+			<img src="/img/logo.webp" class="w-[40rem]" alt="nangotara s.l logotipo">
 		</div>
 		
 		<section class="banner flex items-center h-[25rem] w-full lg:h-[45rem] ">
@@ -44,39 +44,40 @@ import Comentarios from '../components/Comentarios.astro';
 			</div>
 		</section>
 
-			<h2 class="flex items-center justify-center text-2xl font-bold lg:text-4xl text-center mt-6 mb-10 border-t border-b w-[90%] mx-auto  p-5 text-[#ff9c0d] lg:h-40">Nuestos Servicios</h2>
+			<h2 class="flex items-center justify-center text-2xl font-bold lg:text-4xl text-center mt-6 mb-10  border-b w-[90%] mx-auto  p-5 text-sky-600 lg:h-40">Nuestos Servicios</h2>
 
-		<section class="  mx-auto text-center mt-5  flex flex-col items-center gap-10 lg:flex-row">
-			<div class=" w-[90%] rounded-md border-2 ">
-				<img class=" rounded-t-md w-full" src="/img/pladur.webp" alt="servicio img" >
-				<p class=" w-full bg-sky-900 text-white rounded-b-md p-4"> <span class="text-2xl text-[#ff9c0d]">Pladur</span> <br> Especialistas en todo tipo de estructuras de pladur. tabiques, techos, muebles y mas.  </p>
+		<section class=" p-5  mx-auto text-center mt-5  flex flex-col items-center gap-10 md:grid md:grid-cols-2">
+			<div class="  rounded-md border-2 ">
+				<img class=" rounded-t-md w-full" src="/img/pladur.webp" alt="imagen servicio de pladur" >
+				<p class=" w-full bg-sky-900 text-white rounded-b-md p-4 md:text-2xl"> <span class="text-2xl md:text-4xl text-[#ff9c0d]">Pladur</span> <br> Especialistas en todo tipo de estructuras de pladur. tabiques, techos, muebles y mas.  </p>
 			</div>
-			<div class=" servicios_img w-[90%] rounded-md border-2 ">
-				<img class=" rounded-t-md w-full" src="/img/obra.webp" alt="servicio img" >
-				<p class=" w-full bg-sky-900 text-white rounded-b-md p-4"> <span class="text-2xl text-[#ff9c0d]">Reformas</span> <br> Revestimientos, Ceramica, Rebozados, Tabiques, baños, cocinas,  Fachadas etc. </p>
+			<div class=" servicios_img  rounded-md border-2 ">
+				<img class=" rounded-t-md w-full" src="/img/obra.webp" alt="imagen servicio de reformas" >
+				<p class=" w-full bg-sky-900 text-white rounded-b-md p-4 md:text-2xl"> <span class="text-2xl md:text-4xl text-[#ff9c0d]">Reformas</span> <br> Revestimientos, Ceramica, Rebozados, Tabiques, baños, cocinas,  Fachadas etc. </p>
 			</div>
-			<div class=" servicios_img w-[90%] rounded-md border-2 ">
-				<img class=" rounded-t-md w-full" src="/img/electricidad.webp" alt="servicio img" >
-				<p class=" w-full bg-sky-900 text-white rounded-b-md p-4"> <span class="text-2xl text-[#ff9c0d]">Electricidad</span> <br>Todo tipo instalaciones electricas. iluminaciones led, lamparas, timbres, internet y mas   </p>
+			<div class=" servicios_img  rounded-md border-2 ">
+				<img class=" rounded-t-md w-full" src="/img/electricidad.webp" alt="imagen servicio de electricidad" >
+				<p class=" w-full bg-sky-900 text-white rounded-b-md p-4 md:text-2xl"> <span class="text-2xl md:text-4xl text-[#ff9c0d]">Electricidad</span> <br>Todo tipo instalaciones electricas. iluminaciones led, lamparas, timbres, internet y mas   </p>
 			</div>
 			
-			<div class=" servicios_img w-[90%] rounded-md border-2 ">
-				<img class=" rounded-t-md w-full" src="/img/fontaneria.webp" alt="servicio img" >
-				<p class=" w-full bg-sky-900 text-white rounded-b-md p-4"> <span class="text-2xl text-[#ff9c0d]">Fontaneria</span> <br>Instalacion y reparacion de fontaneria  trabajamos con  materiales de calidad. </p>
+			<div class=" servicios_img  rounded-md border-2 ">
+				<img class=" rounded-t-md w-full" src="/img/fontaneria.webp" alt="imagen servicio de fontaneria" >
+				<p class=" w-full bg-sky-900 text-white rounded-b-md p-4 md:text-2xl"> <span class="text-2xl md:text-4xl text-[#ff9c0d]">Fontaneria</span> <br>Instalacion y reparacion de fontaneria  trabajamos con  materiales de calidad. </p>
 			</div>
 		</section>
 		
-		<h2 class="flex items-center justify-center w-[90%] mx-auto border-t text-2xl font-bold lg:text-4xl text-center mt-10 mb-10 border-b p-5 text-[#ff9c0d] lg:h-40">Contacto</h2>
+		<h2 class="flex items-center justify-center w-[90%] mx-auto border-t text-2xl font-bold lg:text-4xl text-center mt-10 mb-10 border-b p-5 text-sky-600 lg:h-40">Contacto</h2>
 
-		<section class="contacto_img mt-11 flex items-center h-[22rem] lg:h-[45rem]">
-			<div class=" bg-sky-900 w-[85%] rounded-e-xl  font-light mt-16 p-4 border-t-2 text-gray-200 text-lg lg:w-[50%]">
-				<h2 class=" font-semibold text-[#ff9c0d] text-2xl text-center lg:text-4xl">Contactanos</h2>
-				<p class=" lg:text-3xl">Llamanos para brindarte mas informacion sobre presupuestos y servicios. <span class=" font-semibold text-[#ff9c0d] text-lg lg:text-3xl">whatsapp 656 54 25 19</span> <br> <span class=" font-semibold text-[#ff9c0d] text-lg lg:text-3xl">josearanavalenzuela54@gmail.com</span></p>
+		<section class="contacto_img mt-11 flex items-center h-[20rem]">
+			<div class=" bg-sky-900 w-[95%] h-40 rounded-e-xl font-light mt-16 p-2 border-t-2 text-gray-200 text-lg md:h-[40] md:w-[50%]">
+				<h2 class=" font-semibold p-4 text-2xl text-center lg:text-4xl">Contactanos</h2>
+				 <p class=" font-semibold text-lg lg:text-3xl">whatsapp 656 54 25 19</p>
+				 <p class=" font-semibold text-lg lg:text-3xl">josearanavalenzuela54@gmail.com</p></p>
 			</div>
 		</section>
 
 		<NuestrosProyectos />
-		<Comentarios />
+		
 
 		<section class="
 		servicios_img  w-full flex items-center justify-center p-10"> 
